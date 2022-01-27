@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.LoginFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_100_dp"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_20_dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5_dp"
+            android:ems="10"
+            android:hint="@string/please_enter_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:lines="1" />
+
+        <TextView
+            android:id="@+id/valid_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10_dp"
+            android:textColor="@color/design_default_color_error" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5_dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:imeOptions="actionGo"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/valid_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20_dp"
+            android:textColor="@color/design_default_color_error" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

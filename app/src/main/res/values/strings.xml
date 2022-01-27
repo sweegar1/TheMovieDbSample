@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TheMovieDb</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="empty_list">Your List is empty</string>
+    <string name="internet_error">Please Check Your Intenet Connection!!</string>
+    <string name="please_enter_email">Please Enter Email</string>
+    <string name="password">Password</string>
+    <string name="login">Submit</string>
+    <string name="please_enter_valid_email_address">Please enter valid Email Address</string>
+    <string name="password_should_contain_8_to_15_characters">Password should contain 8 to 15 Characters</string>
+</resources>
