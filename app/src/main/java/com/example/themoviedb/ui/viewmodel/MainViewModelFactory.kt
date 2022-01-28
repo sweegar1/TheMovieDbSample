@@ -12,7 +12,7 @@ class MainViewModelFactory (private val apiHelper: ApiHelper, private val contex
     ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
-            return MainViewModel(MainRepository(apiHelper), context as Application) as T
+            return MainViewModel(MainRepository(apiHelper)) as T
         }
         throw IllegalArgumentException("Unknown class name")
     }

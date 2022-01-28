@@ -11,10 +11,10 @@ import kotlinx.coroutines.Dispatchers
 import android.util.Patterns
 
 import android.text.TextUtils
+import androidx.lifecycle.ViewModel
 
 
-class MainViewModel(private val mainRepository: MainRepository, application: Application) :
-    AndroidViewModel(application) {
+class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
     var emailMessage = MutableLiveData<String>()
     var passwordMessage = MutableLiveData<String>()
     var addFragment = MutableLiveData<Boolean>(false)
@@ -35,7 +35,7 @@ class MainViewModel(private val mainRepository: MainRepository, application: App
     }
 
     fun validateValue(target: String, passwordText: String?) {
-        if (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches()) {
+        if (isValidEmail(target)) {
             emailMessage.value= ""
             if (!TextUtils.isEmpty(passwordText)) {
                 if (passwordText!!.length >= 8) {

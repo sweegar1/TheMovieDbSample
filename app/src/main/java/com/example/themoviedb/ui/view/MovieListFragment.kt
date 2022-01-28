@@ -84,6 +84,8 @@ class MovieListFragment : Fragment() {
                         progress_circular.visibility = View.GONE
                         message.text = it.message
                         message.visibility = View.VISIBLE
+                        gridview.visibility = View.GONE
+
                     }
 
                 }
